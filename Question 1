@@ -1,0 +1,2 @@
+df=pd.read_csv('df = pd.read_cs('gold_price.csv')')
+print(df)
