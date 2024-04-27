@@ -4,5 +4,5 @@ import pickle
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
-df=pd.read_csv('df = pd.read_cs('/kaggle/input/gold-price-prediction-dataset/FINAL_USO.csv')')
+df=pd.read_csv('df = pd.read_cs('gold_price.csv')')
 print(df)
