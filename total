@@ -33,6 +33,7 @@ print(df.duplicated().sum())
 
 
 #prints the histogram in pink#
+#must be read separately or it wont be printed#
 df=pd.read_csv('gold_price.csv')
 plt.figure(figsize=(15,10))
 plt.title('Gold Price Histogram')
