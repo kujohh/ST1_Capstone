@@ -6,11 +6,32 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 #Q1#
-import pandas as pd 
-df=pd.read_csv('df = pd.read_cs('gold_price.csv')')
+df = pd.read_csv('gold_price.csv')
 print(df)
 
 #Q4#
+#prints plot line diagram#
+
+import pandas as pd 
+import matplotlib.pyplot as plt
+
+df=pd.read_csv('gold_price.csv')
+df['Date'] = pd.to_datetime(df['Date'])
+df.set_index('Date',inplace=True)
+df['Close'].plot(kind='line',figsize=(15,10),color='pink')
+plt.xticks(df.index[::50],rotation=45)
+plt.xlabel('Date')
+plt.ylabel('Close')
+plt.title('Close Price Over Time')
+plt.show()
+
+
+#Q5#
+print(df.info())
+print(df.describe())
+print(df.duplicated().sum())
+
+
 #prints the histogram in pink#
 df=pd.read_csv('gold_price.csv')
 plt.figure(figsize=(15,10))
@@ -19,8 +40,3 @@ plt.xlabel('Gold Close Price')
 plt.ylabel('Frequency')
 plt.hist(df['Close'], bins =50, color='pink',edgecolor='black')
 plt.show()
-
-#Q5#
-print(df.info())
-print(df.describe())
-print(df.duplicated().sum())
