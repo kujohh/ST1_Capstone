@@ -1,13 +1,26 @@
+#imports#
 import numpy as np
 import pandas as pd 
 import pickle
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+#Q1#
 import pandas as pd 
 df=pd.read_csv('df = pd.read_cs('gold_price.csv')')
 print(df)
 
+#Q4#
+#prints the histogram in pink#
+df=pd.read_csv('gold_price.csv')
+plt.figure(figsize=(15,10))
+plt.title('Gold Price Histogram')
+plt.xlabel('Gold Close Price')
+plt.ylabel('Frequency')
+plt.hist(df['Close'], bins =50, color='pink',edgecolor='black')
+plt.show()
+
+#Q5#
 print(df.info())
 print(df.describe())
 print(df.duplicated().sum())
