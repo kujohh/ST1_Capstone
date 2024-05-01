@@ -146,7 +146,7 @@ clean_Y = Y[~outliers]
 cleaned_model = LinearRegression()
 cleaned_model.fit(clean_X, clean_Y)
 
-clean_df = pd.concat([cleaned_X, cleaned_Y], axis=1)
+clean_df = pd.concat([clean_X, clean_Y], axis=1)
 sns.pairplot(clean_df)
 plt.show()
 
