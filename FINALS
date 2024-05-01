@@ -56,3 +56,11 @@ print(df.info())
 print(df.describe())
 print('duplicate rows:',
       df.duplicated().sum())
+
+
+#QUESTION 6#
+#Wanted Columns:Date, High, Low, Close#
+#High, Low and Close can all be altered by adding the appropriate prefix to the object names in the code.
+eg. 'High, Low, Close' become: 'SP_Open, SP_Low, SP_Close'#
+
+#QUESTION 7#
