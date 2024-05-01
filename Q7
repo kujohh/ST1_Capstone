@@ -19,9 +19,12 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('gold_price.csv')
 price_counts = df['Close'].value_counts()
 
-plt.figure(figsize=(15,10))
+plt.figure(figsize=(15,5))
 plt.title('Gold Price Bar Plot')
 plt.xlabel('Gold Close Price')
 plt.ylabel('Frequency')
 plt.bar(price_counts.index, price_counts.values, color='black', width=0.05)
+plt.xticks(range(int(price_counts.index.min()), int(price_counts.index.max())+1, 5))
+
 plt.show()
+
