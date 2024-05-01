@@ -36,4 +36,14 @@ plt.legend()
 
 plt.show()
 
+#print pairplot#
+import pandas as pd 
+import seaborn as sns
+import matplotlib.pyplot as plt
+df=pd.read_csv('gold_price.csv')
+selected_columns = ['Open', 'High', 'Low', 'Close']
+sns.pairplot(df[selected_columns])
+plt.show()
+
+
 
