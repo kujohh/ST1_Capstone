@@ -150,3 +150,5 @@ clean_df = pd.concat([clean_X, clean_Y], axis=1)
 sns.pairplot(clean_df)
 plt.show()
 
+#QUESTION 12 and QUESTION 13#
+
