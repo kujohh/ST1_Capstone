@@ -85,7 +85,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 df = pd.read_csv('gold_price.csv')
 price_low = df['Low'].value_counts()
-price_counts = df['Close'].value_counts()
 plt.figure(figsize=(15,5))
 plt.title('Gold Price Bar Plot')
 plt.xlabel('Gold Close Price')
@@ -94,4 +93,20 @@ plt.bar(price_low.index, price_low.values, color='blue', width=0.05, label='Low 
 plt.xticks(range(int(price_counts.index.min()), int(price_counts.index.max())+1, 5))
 plt.legend()
 plt.show()
+
+#produces High price bar chart#
+
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('gold_price.csv')
+price_high = df['High'].value_counts()
+plt.figure(figsize=(15,5))
+plt.title('Gold Price Bar Plot')
+plt.xlabel('Gold Close Price')
+plt.ylabel('Frequency')
+plt.bar(price_high.index, price_high.values, color='green', width=0.05, label='Low Price')
+plt.xticks(range(int(price_counts.index.min()), int(price_counts.index.max())+1, 5))
+plt.legend()
+plt.show()
+
 
