@@ -1,1 +1,9 @@
 #histogram#
+#prints the histogram in pink#
+df=pd.read_csv('gold_price.csv')
+plt.figure(figsize=(15,10))
+plt.title('Gold Price Histogram')
+plt.xlabel('Gold Close Price')
+plt.ylabel('Frequency')
+plt.hist(df['Close'], bins =50, color='pink',edgecolor='black')
+plt.show()
