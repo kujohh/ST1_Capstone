@@ -109,4 +109,13 @@ plt.xticks(range(int(price_counts.index.min()), int(price_counts.index.max())+1,
 plt.legend()
 plt.show()
 
+#QUESTION 8
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df=pd.read_csv('gold_price.csv')
+columns=['High','Low','Open','Close']
+sns.pairplot(df[columns])
+plt.show()
 
