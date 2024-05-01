@@ -64,3 +64,18 @@ print('duplicate rows:',
 eg. 'High, Low, Close' become: 'SP_Open, SP_Low, SP_Close'#
 
 #QUESTION 7#
+
+#histogram#
+#produces Close price histogram#
+
+import pandas as pd 
+import matplotlib.pyplot as plt
+df=pd.read_csv('gold_price.csv')
+plt.figure(figsize=(15,10))
+plt.title('Gold Price Histogram')
+plt.xlabel('Gold Close Price')
+plt.ylabel('Frequency')
+plt.hist(df['Close'], bins =50, color='pink',edgecolor='black')
+plt.show()
+
+#
