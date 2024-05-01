@@ -1,5 +1,6 @@
 #histogram#
 #prints the histogram in pink#
+
 df=pd.read_csv('gold_price.csv')
 plt.figure(figsize=(15,10))
 plt.title('Gold Price Histogram')
@@ -11,6 +12,7 @@ plt.show()
 
 #barchart#
 #prints bar chart in black#
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
