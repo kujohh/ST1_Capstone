@@ -3,3 +3,8 @@ import pandas as pd
 import pickle
 import seaborn as sns
 import matplotlib.pyplot as plt
+
+#QUESTION 1#
+import pandas as pd 
+df = pd.read_csv('gold_price.csv')
+print(df.iloc[:,:5])
