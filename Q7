@@ -7,3 +7,19 @@ plt.xlabel('Gold Close Price')
 plt.ylabel('Frequency')
 plt.hist(df['Close'], bins =50, color='pink',edgecolor='black')
 plt.show()
+
+
+#barchart#
+#prints bar chart in black#
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('gold_price.csv')
+price_counts = df['Close'].value_counts()
+
+plt.figure(figsize=(15,10))
+plt.title('Gold Price Bar Plot')
+plt.xlabel('Gold Close Price')
+plt.ylabel('Frequency')
+plt.bar(price_counts.index, price_counts.values, color='black', width=0.05)
+plt.show()
