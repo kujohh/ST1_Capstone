@@ -1,0 +1,31 @@
+#CLEANUP VISUALISED AS PAIRPLOT#
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+data = pd.read_csv('gold_price.csv')
+
+X = data[['Open', 'High', 'Low']]
+Y = data['Close']
+
+model = LinearRegression()
+model.fit(X, Y)
+
+predicted_Y = model.predict(X)
+
+absolute_diff = np.abs(Y - predicted_Y)
+outlier_threshold = 0.25
+outliers = absolute_diff > outlier_threshold
+
+cleaned_X = X[~outliers]
+cleaned_Y = Y[~outliers]
+
+cleaned_model = LinearRegression()
+cleaned_model.fit(cleaned_X, cleaned_Y)
+
+cleaned_data = pd.concat([cleaned_X, cleaned_Y], axis=1)
+sns.pairplot(cleaned_data)
+plt.show()
