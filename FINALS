@@ -164,11 +164,8 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.metrics import mean_absolute_error
 df=pd.read_csv('gold_price.csv')
 
-# Feature selection (you might want to choose different features)
-features = ['Open', 'High', 'Low']
-
 # Creating feature matrix X and target vector y
-X = df[features]
+X = df[['Open', 'High', 'Low']]
 Y = df['Close']
 
 # Train-test split
