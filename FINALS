@@ -165,30 +165,30 @@ from sklearn.metrics import mean_absolute_error
 df=pd.read_csv('gold_price.csv')
 
 # Feature selection (you might want to choose different features)
-features = ['Open', 'High', 'Low', 'Volume']
+features = ['Open', 'High', 'Low']
 
 # Creating feature matrix X and target vector y
 X = df[features]
-y = df['Close']
+Y = df['Close']
 
 # Train-test split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=30)
 
 # Model initialization and training
 model = LinearRegression()
-model.fit(X_train, y_train)
+model.fit(X_train, Y_train)
 
 # Prediction
-y_pred = model.predict(X_test)
+Y_pred = model.predict(X_test)
 # Model evaluation
-mse = mean_squared_error(y_test, y_pred)
+mse = mean_squared_error(Y_test, Y_pred)
 print(f'Mean Squared Error: {mse}')
 # Mean Absolute Error (MAE)
-mae = mean_absolute_error(y_test, y_pred)
+mae = mean_absolute_error(Y_test, Y_pred)
 print(f'Mean Absolute Error: {mae}')
 
 # R-squared
-r2 = r2_score(y_test, y_pred)
+r2 = r2_score(Y_test, Y_pred)
 print(f'R-squared: {r2}')
 
 #POLYNOMIAL#
