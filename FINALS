@@ -229,4 +229,5 @@ print(f'Mean Absolute Error: {mae}')
 r2 = r2_score(Y_test, Y_pred)
 print(f'R-squared: {r2}')
 
+#Polynomial Regression produces better results and will therefore be the one that is to be deployed#
 
